@@ -7,6 +7,7 @@ public class WorkerOne implements Runnable{
             try {
                 Thread.sleep(1000);
                 System.out.println("Worker 1 - " + (i + 1));
+                Thread.yield(); // yield method
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
